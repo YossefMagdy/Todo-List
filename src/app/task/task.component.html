@@ -1,0 +1,19 @@
+<div class="container">
+    <div *ngIf="!taskid">
+        <p class="alert alert-danger">there is no task Id </p>
+    
+    </div>
+</div>
+
+<div *ngIf="taskid" >
+<div class="container mt-5 text-center">
+    <input type="text" [(ngModel)]="task.title" class="form-control" name="" id="">
+    <textarea name="" class="form-control mt-3" [(ngModel)]="task.Describtion" id="" cols="30" rows="10"></textarea>
+    <div class="d-flex justify-content-between">
+        <button class="btn btn-primary mt-3" routerLink="/home"> Cancel </button>
+    <button class="btn btn-warning mt-3" (click)="updateTask()"> Edit </button>
+    <button class="btn btn-danger mt-3" (click)="deleteTask()"> Delete </button>
+    </div>
+</div>
+    
+</div>

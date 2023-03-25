@@ -1,0 +1,7 @@
+<div class="container mt-5">
+    <h3 class="text-center">Add New Tasks</h3>
+    <input #taskTitle class="form-control" type="text" placeholder="Write Tasks Here !">
+    <textarea #taskDescribtion  class="form-control mt-3" placeholder="Write Describtion Here !" name="" id="" cols="30" rows="10"></textarea>
+    <button class="btn btn-info mt-3" (click)="SaveTask(taskTitle,taskDescribtion)">Save</button>
+    <button class="btn btn-warning ms-3 mt-3" routerLink="/home">Cancel</button>
+</div>

@@ -1,0 +1,13 @@
+<div class="container mt-5">
+    <div *ngIf="Mytask.length==0">
+        <p class="alert alert-danger">No Tasks For Today</p>
+    </div> 
+    <div *ngIf="Mytask.length!=0">
+        <ul class="list-group">
+            <li class="list-group-item" *ngFor="let x of Mytask , index as i"><a [routerLink]="['/task',i]">{{x.title}}</a>
+                <button class="float-end btn btn-danger" (click)="DeleteTask(i)">Delete</button>
+                <div class="clearfix"></div>
+            </li>
+        </ul>
+    </div>
+</div>
